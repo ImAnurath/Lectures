@@ -1,0 +1,32 @@
+CMake Error at C:/Users/Anurath/esp/v5.4/esp-idf/tools/cmake/component.cmake:254 (message):
+  Traceback (most recent call last):
+
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "C:\Users\Anurath\.espressif\python_env\idf5.4_py3.11_env\Lib\site-packages\idf_component_manager\prepare_components\__main__.py", line 6, in <module>
+      main()
+    File "C:\Users\Anurath\.espressif\python_env\idf5.4_py3.11_env\Lib\site-packages\idf_component_manager\prepare_components\prepare.py", line 130, in main
+      args.func(args)
+    File "C:\Users\Anurath\.espressif\python_env\idf5.4_py3.11_env\Lib\site-packages\idf_component_manager\prepare_components\prepare.py", line 40, in inject_requirements
+      ).inject_requirements(
+        ^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\Anurath\.espressif\python_env\idf5.4_py3.11_env\Lib\site-packages\idf_component_manager\core.py", line 99, in wrapper
+      return func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\Anurath\.espressif\python_env\idf5.4_py3.11_env\Lib\site-packages\idf_component_manager\core.py", line 781, in inject_requirements
+      requirements = requirements_manager.load()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\Anurath\.espressif\python_env\idf5.4_py3.11_env\Lib\site-packages\idf_component_manager\cmake_component_requirements.py", line 95, in load
+      with open(self.path, encoding='utf-8') as f:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  FileNotFoundError: [Errno 2] No such file or directory:
+  'C:/Users/Anurath/Desktop/Projects/Lecture/RLS/blink/build/component_requires.temp.cmake'
+
+
+Call Stack (most recent call first):
+  C:/Users/Anurath/esp/v5.4/esp-idf/tools/cmake/build.cmake:644 (__component_get_requirements)
+  C:/Users/Anurath/esp/v5.4/esp-idf/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+

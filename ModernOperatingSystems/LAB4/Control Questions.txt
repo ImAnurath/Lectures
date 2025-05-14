@@ -1,0 +1,53 @@
+Q1 - List the main problems with the concept of the concurrent computing.
+A1 - 
+Race Conditions: Multiple processes or threads accessing shared resources may lead to unpredictable behavior.
+Deadlocks: Two or more processes waiting indefinitely for resources held by each other.
+Livelocks: Processes constantly changing state but never making progress.
+Starvation: Some processes never get access to resources because others are prioritized.
+Synchronization Overhead: Managing multiple threads or processes adds complexity and performance overhead.
+
+
+Q2 - Three Contexts in Which Concurrent Computations Occur
+A2 -
+Multiprogramming: Multiple programs share a single CPU by switching between processes.
+Multiprocessing: Multiple CPUs execute different processes simultaneously.
+Distributed Computing: Computations occur across multiple networked machines.
+
+Q3- Degrees of Informing Processes About Other Processes
+A3- 
+Indirect Communication: Processes do not directly know about each other but communicate through shared resources like files or message queues.
+Direct Communication: Processes explicitly send and receive messages.
+Shared Memory: Processes communicate through shared variables and require synchronization mechanisms.
+
+Q4 - Difference Between Competing and Cooperating Processes
+A4 -
+Competing Processes: Independent processes that do not share data but may compete for system resources.
+Cooperating Processes: Processes that share data and require synchronization to avoid conflicts.
+
+Q5 - Requirements for Mutual Exclusion
+A5 -
+Mutual Exclusion: Only one process can enter the critical section at a time.
+Progress: If no process is in the critical section, one should be able to enter.
+Bounded Waiting: A process waiting for the critical section should eventually be allowed in.
+No Assumptions About CPU Speed: The algorithm must work regardless of execution speed.
+
+Q6 - Operations Performed with Semaphores
+A6 -
+Wait (P operation): Decreases the semaphore value (blocks if the value is zero).
+Signal (V operation): Increases the semaphore value (allows a waiting process to proceed).
+
+Q7 - Difference Between Binary and General (Counting) Semaphores
+A7 - 
+Binary Semaphore: Can only have values 0 or 1 (like a mutex).
+Counting Semaphore: Can have values greater than 1, allowing multiple processes to access a resource up to a set limit.
+
+Q8 - Difference Between Strong and Weak Semaphores
+A8 - 
+Strong Semaphore: Guarantees FIFO (first-come, first-served) order for waiting processes.
+Weak Semaphore: Does not guarantee ordering, meaning processes may be scheduled arbitrarily.
+
+Q9 - What Is a Monitor?
+A9 - 
+A monitor is a high-level synchronization construct that encapsulates shared data, procedures, 
+and synchronization mechanisms. It ensures that only one process can execute a monitor function at a time, simplifying concurrent programming.
+
