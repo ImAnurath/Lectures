@@ -1,0 +1,38 @@
+Explanation: 
+    Operand 7(op7) is at DataBase + 50
+    Operand 14(op14) in I/O 30
+    Task: Subtract operand 7 from Operand 14 and save the result in memory at DataBase + 60
+
+CodeBase: 350 -> Where the instuctions start
+DataBase = 725: Where the operands(data) start
+
+Task:
+    1- Get op14 from I/O30
+    2- Get op7 from DataBase + 50(Memory address 725+50=775)
+    3- op7 - op14 => DataBase + 60 = 785 Memory address 
+    Load operand from I/O buffer #30, subtract the operand stored at memory location 775 (DataBase + 50), 
+    and store the result at memory location 785 (DataBase + 60).
+
+Code:
+
+; Code starts at CodeBase address 350
+
+        ORG 350       ; Set the starting address to 350
+
+START:  IN  30        ; Instruction 3030:
+                      ; "3" indicates an Input operation.
+                      ; Reads from I/O device 30 (which holds operand 14)
+                      ; and loads it into the accumulator (AC).
+
+        SUB 775       ; Instruction 6775:
+                      ; "6" indicates a Subtract operation.
+                      ; Subtracts the value stored at memory address 775 (operand 7)
+                      ; from the accumulator.
+                      ; AC = 14 - 7 = 7
+
+        STO 785       ; Instruction 2785:
+                      ; "2" indicates a Store operation.
+                      ; Stores the value in the accumulator into memory address 785,
+                      ; which is the target storage location.
+
+        HLT           ; Halt execution.
