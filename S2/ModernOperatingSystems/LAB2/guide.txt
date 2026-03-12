@@ -1,0 +1,9 @@
+Assignment 1:
+    Compile: javac Assignment1/*.java
+    Exectue: java Assignment1.RangeStatic [Input Frequency]
+    x<100 : Low Freq
+    100<x<1000 : Medium Freq
+    x>1000 : High Freq
+Assignment 2:
+    Compile: javac Assignment2/*.java
+    Exectue: java Assignment2.CreateFilter3 [Option Number 1 to 4]
